@@ -6,10 +6,21 @@ import org.testng.Assert;
 public class BasePage {
 	static WebDriver driver;
 	public static void verifyUrl() {
-		String url=driver.getCurrentUrl();
-		Assert.assertEquals(url, "www.facebook.com");
-		System.out.println("Url matched");
+		
+		
+		try {
+			String url=driver.getCurrentUrl();
+			Assert.assertEquals(url, "www.facebook.com");
+			System.out.println("Url matched");
+			
+		}
+		catch(NullPointerException e) {
+			e.printStackTrace();
+			
+		}
 	}
+	
+	
 	
 	public static void main(String[] args) {
 		System.out.println("Hello");
