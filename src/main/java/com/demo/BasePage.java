@@ -4,11 +4,16 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 public class BasePage {
-	WebDriver driver;
-	public void verifyUrl() {
+	static WebDriver driver;
+	public static void verifyUrl() {
 		String url=driver.getCurrentUrl();
 		Assert.assertEquals(url, "www.facebook.com");
 		System.out.println("Url matched");
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("Hello");
+		verifyUrl();
 	}
 
 }
