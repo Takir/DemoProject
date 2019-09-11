@@ -14,6 +14,7 @@ public class BasePage {
 	public static void main(String[] args) {
 		System.out.println("Hello");
 		verifyUrl();
+		System.out.println("Hello Testing ....Hello..Hello");
 	}
 
 }
